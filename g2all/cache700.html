@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" manifest="700.manifest">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101113">
+<title>GAME ON | Offline Cache</title>
+<style>
+*{box-sizing:border-box}html{min-height:100%;background:#101113}body{margin:0;color:#f5f5f3;font-family:Arial,Helvetica,sans-serif;background:radial-gradient(ellipse at 50% 40%,rgba(186,126,22,.10),transparent 65%),#101113}.shell{max-width:1200px;min-height:100vh;margin:auto;padding:0 48px;display:flex;flex-direction:column}.bar{min-height:86px;border-bottom:1px solid #292a2c;display:flex;align-items:center;justify-content:space-between}.brand{font-size:18px;font-weight:bold;letter-spacing:2px;color:#fff;text-decoration:none}.brand span{color:#f5b331}.platform{font-size:10px;color:#aaa;letter-spacing:2px}main{flex:1;text-align:center;padding:48px 0}.logo{max-width:330px;margin:0 auto 38px;padding:12px 18px;background:#000;border:1px solid #292a2c;border-radius:12px}.logo img{display:block;width:100%;height:auto}.eyebrow{font-size:10px;letter-spacing:2.5px;color:#c4a364;font-weight:bold}h1{font-size:46px;line-height:1.15;letter-spacing:-1.7px;margin:18px 0 14px}h1 span{color:#f5b331}.subtitle{color:#aaa;font-size:14px;line-height:1.7;margin:0 0 32px}.status-card{max-width:650px;margin:auto;text-align:left;padding:28px;background:#1b1c1f;border:1px solid #4d4028;border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,.2)}.status-label{display:flex;justify-content:space-between;font-size:10px;letter-spacing:1.5px;color:#d3b477}.status-label span+span{color:#aaa}.rule{height:3px;width:48px;background:#f5b331;margin:25px 0}#msgs{font-size:21px;line-height:1.55;font-weight:normal;color:#f5f5f3;margin:0;overflow-wrap:break-word;word-wrap:break-word}.note{max-width:600px;margin:20px auto 0;color:#a2a2a8;font-size:12px;line-height:1.7}footer{padding:24px 0;border-top:1px solid #292a2c;text-align:center;color:#999;font-size:10px;line-height:2;letter-spacing:.6px}footer a{color:#d4b477;text-decoration:none;margin:0 5px}a:focus{outline:3px solid #f5b331;outline-offset:5px}@media(max-width:600px){.shell{padding:0 22px}.bar{min-height:76px}.platform{font-size:8px;letter-spacing:1px}.brand{font-size:15px}main{padding:32px 0}.logo{max-width:280px;margin-bottom:30px}h1{font-size:34px;letter-spacing:-1px}.status-card{padding:22px}#msgs{font-size:18px}.status-label{font-size:8px;letter-spacing:1px}}
+</style>
+</head>
+<body>
+<div class="shell">
+<header class="bar"><a class="brand" href="../index.html">GAME <span>ON</span></a><span class="platform">PLAYSTATION 4</span></header>
+<main>
+<div class="logo"><img src="../img.jpg" alt="GAME ON PS Store" width="2048" height="600"></div>
+<div class="eyebrow">OFFLINE CACHE</div>
+<h1>Ready for <span>offline.</span></h1>
+<p class="subtitle">Setting up the offline cache for your PS4.</p>
+<section class="status-card" aria-label="Host status">
+<div class="status-label"><span>INSTALLATION STATUS</span><span>FW 7.00 — 8.52</span></div>
+<div class="rule" aria-hidden="true"></div>
+<h2 id="msgs" role="status" aria-live="polite">Starting Cache Installation...</h2>
+</section>
+<p class="note">Keep this page open and follow the installation status above.</p>
+</main>
+<footer>GAME ON / PS4 HOST<br>Special thanks to <a href="https://twitter.com/_AlAzif">@_AlAzif</a> · ChendoChap · <a href="https://x.com/Kameleonre_">@Kameleonre_</a> · SiSTR0 · Abc</footer>
+</div>
+<script>
+history.replaceState(null,null,'index.html');var histlength=history.length;history.go(-histlength);
+function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));window.msgs.innerHTML="Installing Offline Cache: " + Percent + "%";}
+function DisplayCacheProgress(){window.msgs.innerHTML="Cache Installed Successfully ✔";setTimeout(function(){window.msgs.innerHTML="Now Close And Re-Open Your Browser ...";},1500);}
+window.applicationCache.addEventListener("progress",DLProgress,false);
+window.applicationCache.oncached=function(e){DisplayCacheProgress();};
+window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
+window.applicationCache.onerror=function(e){window.msgs.innerHTML="Error Installing Cache! - Clear and Re-Open Your Browser ...";};
+</script>
+</body>
+</html>

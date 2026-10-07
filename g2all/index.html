@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101113">
+<title>GAME ON | GoldHEN</title>
+<style>
+*{box-sizing:border-box}html{min-height:100%;background:#101113}body{margin:0;color:#f5f5f3;font-family:Arial,Helvetica,sans-serif;background:radial-gradient(ellipse at 50% 40%,rgba(186,126,22,.10),transparent 65%),#101113}.shell{max-width:1200px;min-height:100vh;margin:auto;padding:0 48px;display:flex;flex-direction:column}.bar{min-height:86px;border-bottom:1px solid #292a2c;display:flex;align-items:center;justify-content:space-between}.brand{font-size:18px;font-weight:bold;letter-spacing:2px;color:#fff;text-decoration:none}.brand span{color:#f5b331}.platform{font-size:10px;color:#aaa;letter-spacing:2px}main{flex:1;text-align:center;padding:48px 0}.logo{max-width:330px;margin:0 auto 38px;padding:12px 18px;background:#000;border:1px solid #292a2c;border-radius:12px}.logo img{display:block;width:100%;height:auto}.eyebrow{font-size:10px;letter-spacing:2.5px;color:#c4a364;font-weight:bold}h1{font-size:46px;line-height:1.15;letter-spacing:-1.7px;margin:18px 0 14px}h1 span{color:#f5b331}.subtitle{color:#aaa;font-size:14px;line-height:1.7;margin:0 0 32px}.status-card{max-width:650px;margin:auto;text-align:left;padding:28px;background:#1b1c1f;border:1px solid #4d4028;border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,.2)}.status-label{display:flex;justify-content:space-between;font-size:10px;letter-spacing:1.5px;color:#d3b477}.status-label span+span{color:#aaa}.rule{height:3px;width:48px;background:#f5b331;margin:25px 0}#msgs{font-size:21px;line-height:1.55;font-weight:normal;color:#f5f5f3;margin:0;overflow-wrap:break-word;word-wrap:break-word}.note{max-width:600px;margin:20px auto 0;color:#a2a2a8;font-size:12px;line-height:1.7}footer{padding:24px 0;border-top:1px solid #292a2c;text-align:center;color:#999;font-size:10px;line-height:2;letter-spacing:.6px}footer a{color:#d4b477;text-decoration:none;margin:0 5px}a:focus{outline:3px solid #f5b331;outline-offset:5px}@media(max-width:600px){.shell{padding:0 22px}.bar{min-height:76px}.platform{font-size:8px;letter-spacing:1px}.brand{font-size:15px}main{padding:32px 0}.logo{max-width:280px;margin-bottom:30px}h1{font-size:34px;letter-spacing:-1px}.status-card{padding:22px}#msgs{font-size:18px}.status-label{font-size:8px;letter-spacing:1px}}
+</style>
+</head>
+<body>
+<div class="shell">
+<header class="bar"><a class="brand" href="../index.html">GAME <span>ON</span></a><span class="platform">PLAYSTATION 4</span></header>
+<main>
+<div class="logo"><img src="../img.jpg" alt="GAME ON PS Store" width="2048" height="600"></div>
+<div class="eyebrow">YOUR CONSOLE. YOUR EXPERIENCE.</div>
+<h1>Let’s get <span>started.</span></h1>
+<p class="subtitle">GoldHEN v2.4b18.10 · PS4 Exploit Host</p>
+<section class="status-card" aria-label="Host status">
+<div class="status-label"><span>GOLDHEN / STATUS</span><span>FW 7.00 — 13.00</span></div>
+<div class="rule" aria-hidden="true"></div>
+<h2 id="msgs" role="status" aria-live="polite">Loading GoldHEN v2.4b18.10... Please Wait</h2>
+</section>
+<p class="note">Follow the status above. This host is intended for compatible PS4 consoles.</p>
+</main>
+<footer>GAME ON / PS4 HOST<br>Special thanks to <a href="https://twitter.com/_AlAzif">@_AlAzif</a> · ChendoChap · <a href="https://x.com/Kameleonre_">@Kameleonre_</a> · SiSTR0 · Abc</footer>
+</div>
+<script>
+var uaFull = navigator.userAgent;
+var match = uaFull.match(/PlayStation 4[ /]([\d.]+)/i);
+var isPS4 = match !== null;
+var fwVersion = isPS4 ? match[1] : "Unknown";
+var fwNum = parseFloat(fwVersion);
+
+function onScriptError() {
+    msgs.innerHTML = "Content not Found! - Clear Browser Data and Re-Install Cache ...";
+}
+
+if (!isPS4) {
+    document.addEventListener("DOMContentLoaded", () => {
+        msgs.innerHTML = "Only for PS4 with Firmware 7.00 to 13.00";
+    });
+} else {
+    if (window.applicationCache.status == '0') {
+        if (fwNum >= 7.00 && fwNum <= 8.52) {
+            window.location.replace("cache700.html");
+        } else if (fwNum >= 9.00 && fwNum <= 9.60) {
+            window.location.replace("cache900.html");
+        } else if (fwNum >= 10.00 && fwNum <= 11.02) {
+            window.location.replace("cachecss.html");
+        } else if (fwNum >= 11.50 && fwNum <= 13.00) {
+            window.location.replace("cacheslopkit.html");
+        } else {
+            document.addEventListener("DOMContentLoaded", () => {
+                msgs.innerHTML = 'Unsupported Firmware: <span style="color: red;">' + fwVersion + '</span>';
+            });
+        }
+    } else {
+        if (fwNum >= 7.00 && fwNum <= 8.52) {
+            var script = document.createElement('script');
+            script.type = 'module';
+            script.src = "700/alert.js";
+            script.onerror = onScriptError;
+            document.head.appendChild(script);
+        }
+        else if (fwNum >= 9.00 && fwNum <= 9.60) {
+            var script = document.createElement('script');
+            script.type = 'module';
+            script.src = "900/alert.js";
+            script.onerror = onScriptError;
+            document.head.appendChild(script);
+        }
+        else if (fwNum >= 10.00 && fwNum <= 11.02) {
+            var script = document.createElement('script');
+            script.src = "css/main.js";
+            script.onerror = onScriptError;
+            script.onload = function () {
+                setTimeout(function () {
+                    doJb();
+                }, 500);
+            };
+            document.head.appendChild(script);
+        }
+        else if (fwNum >= 11.50 && fwNum <= 12.02) {
+            var script = document.createElement('script');
+            script.type = 'module';
+            script.src = "slopkit/chain_lapse.js";
+            script.onerror = onScriptError;
+            document.head.appendChild(script);
+        }
+        else if (fwNum >= 12.50 && fwNum <= 13.00) {
+            var script = document.createElement('script');
+            script.type = 'module';
+            script.src = "slopkit/chain_poops.js";
+            script.onerror = onScriptError;
+            document.head.appendChild(script);
+        }
+    }
+}
+</script>
+</body>
+</html>

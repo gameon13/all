@@ -1,0 +1,48 @@
+* { box-sizing: border-box; }
+html { min-height: 100%; background: #101113; }
+body { margin: 0; color: #f5f5f3; font-family: Arial, Helvetica, sans-serif; background: radial-gradient(ellipse at 50% 35%, rgba(186,126,22,.09), transparent 60%), #101113; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; cursor: pointer; }
+[hidden] { display: none !important; }
+.page-shell { max-width: 1240px; min-height: 100vh; margin: auto; padding: 0 54px; display: flex; flex-direction: column; }
+.topbar { min-height: 94px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #292a2c; }
+.wordmark { display: flex; align-items: center; font-size: 18px; font-weight: 800; letter-spacing: 2px; }
+.brand-icon { width: 32px; height: 34px; display: inline-flex; align-items: center; justify-content: center; margin-right: 12px; border: 2px solid #f5b331; border-radius: 8px; color: #f5b331; font-size: 22px; }
+.gold { color: #f5b331; margin-left: 6px; }
+.platform { color: #adaeb0; font-size: 10px; letter-spacing: 2px; }
+.platform-dot { display: inline-block; width: 6px; height: 6px; margin-left: 12px; border-radius: 50%; background: #f5b331; }
+main { flex: 1; padding: 38px 0 48px; text-align: center; }
+.brand-banner { max-width: 360px; margin: 0 auto 34px; padding: 12px 18px; background: #000; border: 1px solid #292a2c; border-radius: 12px; }
+.brand-banner img { display: block; width: 100%; height: auto; }
+.eyebrow { color: #c4a364; font-size: 10px; font-weight: bold; letter-spacing: 2.5px; }
+.eyebrow > span { display: inline-block; height: 5px; width: 5px; margin-right: 6px; background: #f5b331; border-radius: 50%; vertical-align: middle; }
+h1 { margin: 18px 0 14px; font-size: 56px; line-height: 1.12; letter-spacing: -2.5px; }
+h1 span { color: #f5b331; }
+.intro { color: #a5a5a8; font-size: 15px; line-height: 1.7; margin: 0 0 30px; }
+.host-card { display: block; max-width: 440px; margin: auto; text-align: left; background: #1b1c1f; border: 1px solid #4d4028; border-radius: 18px; overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,.22); transition: border-color .2s, transform .2s; }
+.host-card:hover { transform: translateY(-4px); border-color: #f5b331; }
+.card-top { padding: 22px 26px 0; display: flex; align-items: center; justify-content: space-between; }
+.chip { border: 1px solid #51452c; color: #e6ba63; background: #2e281e; border-radius: 5px; padding: 6px 9px; font-size: 9px; letter-spacing: 1px; }
+.card-number { color: #a0a0a4; font-size: 9px; letter-spacing: 1.5px; }
+.card-body { display: flex; align-items: center; padding: 28px 26px 30px; }
+.hen-symbol { display: inline-block; width: 64px; height: 64px; line-height: 64px; text-align: center; background: #30281b; border: 1px solid #594527; color: #f5b331; border-radius: 15px; font-size: 36px; font-weight: 800; margin-right: 20px; }
+.hen-symbol span { font-size: 20px; vertical-align: top; }
+h2 { margin: 0; font-size: 30px; letter-spacing: -.8px; }
+.card-body p { margin: 8px 0 0; font-size: 12px; color: #a7a7ab; }
+.card-body strong { font-weight: normal; color: #dfdfe1; margin-left: 6px; }
+.launch { margin: 0 14px 14px; padding: 17px 20px; display: flex; justify-content: space-between; border-radius: 9px; background: #f5b331; color: #19140c; font-size: 14px; font-weight: bold; }
+.launch > span + span { font-size: 20px; line-height: 16px; }
+.compatibility { margin-top: 18px; color: #99999f; font-size: 11px; }
+footer { display: flex; align-items: center; justify-content: space-between; min-height: 76px; border-top: 1px solid #292a2c; color: #929298; font-size: 9px; letter-spacing: 1.3px; }
+.footer-divider { margin: 0 12px; color: #66543a; }
+footer button { padding: 12px 0 12px 12px; background: transparent; border: 0; color: #c1c1c5; font-size: 11px; }
+footer button span { color: #f5b331; padding-left: 8px; }
+a:focus, button:focus { outline: 3px solid #f5b331; outline-offset: 5px; }
+.wallet { max-width: 560px; margin: 15px auto; padding: 22px; background: #1b1c1f; border: 1px solid #3c3730; border-radius: 12px; text-align: left; }
+.wallet h2 { font-size: 18px; margin-bottom: 12px; letter-spacing: 0; }
+.wallet h2 span { float: right; color: #f5b331; font-size: 12px; }
+.wallet code { color: #bdbdc4; font-size: 13px; overflow-wrap: break-word; word-wrap: break-word; user-select: all; }
+.return-btn { margin: 12px 0; padding: 14px 24px; background: #f5b331; border: 0; border-radius: 8px; font-weight: bold; color: #19140c; }
+@media (min-width: 1500px) { main { padding-top: 60px; } .brand-banner { margin-bottom: 46px; } }
+@media (max-width: 600px) { .page-shell { padding: 0 22px; } .topbar { min-height: 76px; } .wordmark { font-size: 14px; } .platform { font-size: 8px; letter-spacing: 1px; } main { padding-top: 30px; } .brand-banner { max-width: 300px; } h1 { font-size: 40px; letter-spacing: -1.8px; } .eyebrow { font-size: 8px; letter-spacing: 1.8px; } .card-top { padding: 20px 20px 0; } .card-body { padding: 26px 20px; } footer { flex-direction: column; justify-content: center; padding: 18px 0; gap: 6px; } footer button { padding: 8px; } }
+@media (prefers-reduced-motion: reduce) { .host-card { transition: none; } .host-card:hover { transform: none; } }

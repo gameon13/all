@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101113">
+  <title>GAME ON | PS4 Exploit Host</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="wordmark" href="index.html" aria-label="GAME ON home"><span class="brand-icon">G</span> GAME <span class="gold">ON</span></a>
+      <span class="platform">PLAYSTATION 4 <span class="platform-dot"></span></span>
+    </header>
+    <main>
+      <div class="brand-banner"><img src="img.jpg" alt="GAME ON PS Store" width="2048" height="600"></div>
+      <section id="menu" aria-labelledby="msgs">
+        <div class="eyebrow"><span></span> YOUR CONSOLE. YOUR EXPERIENCE.</div>
+        <h1 id="msgs">Ready. Set. <span>Game on.</span></h1>
+        <p class="intro">Your PS4 host, in one place.<br>Select GoldHEN to get started.</p>
+        <a class="host-card" href="g2all/index.html" aria-label="Open GoldHEN host for PS4 firmware 7.00 to 13.00">
+          <div class="card-top"><span class="chip">PS4 HOST</span><span class="card-number">01 / GOLDHEN</span></div>
+          <div class="card-body"><span class="hen-symbol" aria-hidden="true">H<span>+</span></span><div><h2>GoldHEN</h2><p>Firmware <strong>7.00 — 13.00</strong></p></div></div>
+          <div class="launch"><span>Launch GoldHEN</span><span aria-hidden="true">↗</span></div>
+        </a>
+        <p class="compatibility">Check your console firmware before launching.</p>
+      </section>
+      <section id="crypto" aria-labelledby="donation-title" hidden>
+        <div class="eyebrow">SUPPORT THE PROJECT</div>
+        <h1 id="donation-title" tabindex="-1">Keep the <span>game going.</span></h1>
+        <p class="intro">Thank you for your support.</p>
+        <div class="wallet"><h2>Bitcoin <span>BTC</span></h2><code>bc1q6cnsykmvem6zgw8wag3ygee0jkhtxj6rkp2nrm</code></div>
+        <div class="wallet"><h2>Ethereum <span>ETH</span></h2><code>0x7Ae1825ddE196925dB8B7832F436cA0eAeaF932c</code></div>
+        <button class="return-btn" type="button" onclick="load_menu()">← Return to host</button>
+      </section>
+    </main>
+    <footer><span>GAME ON <span class="footer-divider">/</span> PS4 EXPLOIT HOST</span><button id="support-button" type="button" onclick="donations()">Support the project <span aria-hidden="true">↗</span></button></footer>
+  </div>
+  <script>
+    function donations() {
+      document.getElementById('menu').hidden = true;
+      document.getElementById('crypto').hidden = false;
+      document.getElementById('donation-title').focus();
+    }
+    function load_menu() {
+      document.getElementById('crypto').hidden = true;
+      document.getElementById('menu').hidden = false;
+      document.getElementById('support-button').focus();
+    }
+  </script>
+</body>
+</html>

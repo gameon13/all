@@ -1,0 +1,86 @@
+GAME ON — updated appearance
+
+Extract into your existing website, keeping its existing runtime folders.
+The archive contains the home page at the root and the updated host at g2all/index.html.
+The uploaded index(1).html is packaged as g2all/index.html because the host and cache manifests expect that name.
+
+HTML appearance has been refreshed. Original runtime scripts are preserved, with the status element created before scripts execute.
+Manifest paths use forward slashes; the version comment triggers a cache refresh.
+The original binary and cache900.html.bak are included unchanged.
+
+This is a visual update, not a complete standalone host. The following referenced runtime assets were not provided:
+700/alert.js
+700/config.js
+700/kpatch/700.elf
+700/kpatch/750.elf
+700/kpatch/800.elf
+700/kpatch/850.elf
+700/lapse.js
+700/lapse/700.js
+700/lapse/750.js
+700/lapse/751.js
+700/lapse/800.js
+700/lapse/850.js
+700/lapse/852.js
+700/module/chain.js
+700/module/int64.js
+700/module/mem.js
+700/module/memtools.js
+700/module/offset.js
+700/module/rw.js
+700/module/utils.js
+700/module/view.js
+700/psfree.js
+700/rop/700.js
+700/rop/750.js
+700/rop/800.js
+700/rop/850.js
+700/send.js
+900/alert.js
+900/config.js
+900/kpatch/900.elf
+900/kpatch/903.elf
+900/kpatch/950.elf
+900/lapse.js
+900/lapse/900.js
+900/lapse/903.js
+900/lapse/950.js
+900/module/chain.js
+900/module/constants.js
+900/module/int64.js
+900/module/mem.js
+900/module/memtools.js
+900/module/offset.js
+900/module/rw.js
+900/module/utils.js
+900/module/view.js
+900/psfree.js
+900/rop/900.js
+900/rop/950.js
+900/send.js
+css/lapse.js
+css/loader.js
+css/main.js
+css/misc.js
+css/ps4/constants.js
+css/ps4/kernel.js
+css/ps4/patches/1000.bin
+css/ps4/patches/1050.bin
+css/ps4/patches/1100.bin
+css/ps4/patches/1102.bin
+css/ps4/userland.js
+css/worker.js
+css/workers.js
+slopkit/chain_lapse.js
+slopkit/chain_poops.js
+slopkit/core.js
+slopkit/int64.js
+slopkit/mem.js
+slopkit/patches/1150.bin
+slopkit/patches/1200.bin
+slopkit/patches/1250.bin
+slopkit/patches/1300.bin
+slopkit/ps4_offsets.js
+slopkit/rpc_worker.js
+
+Real PS4 launch and offline cache installation have not been tested.
